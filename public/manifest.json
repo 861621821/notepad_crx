@@ -1,0 +1,25 @@
+{
+  "name": "Notepad",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/notepad.png",
+      "32": "/notepad.png",
+      "48": "/notepad.png",
+      "128": "/notepad.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "MacCtrl+Shift+L"
+      },
+      "description": "打开面板"
+    }
+  },
+  "permissions": ["tabs", "storage", "webNavigation"]
+}
