@@ -28,6 +28,7 @@ fetch('/data.json').then(response => response.json())
   .then(({ data }) => {
     tableData.value = data
   });
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

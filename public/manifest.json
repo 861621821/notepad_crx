@@ -1,15 +1,15 @@
 {
-  "name": "Notepad",
+  "name": "冫氵辶",
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
     "default_icon": {
-      "16": "/notepad.png",
-      "32": "/notepad.png",
-      "48": "/notepad.png",
-      "128": "/notepad.png"
+      "16": "/logo.png",
+      "32": "/logo.png",
+      "48": "/logo.png",
+      "128": "/logo.png"
     }
   },
   "commands": {
@@ -21,5 +21,16 @@
       "description": "打开面板"
     }
   },
-  "permissions": ["tabs", "storage", "webNavigation"]
+  "permissions": ["tabs", "storage", "webNavigation"],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ]
 }
