@@ -18,8 +18,7 @@ chrome.runtime.onMessage.addListener(({ action }, sender, sendResponse)=>{
     const date = new Date();
     chrome.storage.local.get({done: false}, ({ done })=>{
       console.log(done ? '已完成' :'未完成');
-      // if(date.getDay() == 5 && date.getHours() >= 18){
-      if(date.getDay() == 6 && date.getHours() >= 10){
+      if(date.getDay() == 5 && date.getHours() >= 18){
         if(!done) {
           chrome.tabs.query({active: true, currentWindow: true}, tabs=>{
             tabs[0] && chrome.tabs.sendMessage(tabs[0].id, {action: 'showModel'})
